@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChillZone Minecraft Shop</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Particle Background -->
+<canvas id="particles"></canvas>
+
+<!-- Light / Dark -->
+<div class="theme-toggle" onclick="toggleTheme()">🌙 / ☀️</div>
+
+<!-- HERO / HOMEPAGE -->
+<section class="hero">
+    <div class="hero-content">
+        <h1 class="logo-glow">ChillZone</h1>
+        <p class="subtitle">Najboljši Minecraft Survival doživetje.</p>
+
+        <div class="hero-buttons">
+            <a href="https://discord.gg/VJvyGX5zdN" target="_blank" class="btn discord">Pridruži se Discordu</a>
+            <a href="#shop" class="btn shop">Vstopi v Shop</a>
+        </div>
+    </div>
+</section>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+    <span class="menu-btn" onclick="toggleMenu()">☰</span>
+    <div class="links">
+        <a href="#shop">Shop</a>
+        <a href="#ranki">Ranki</a>
+        <a href="#keys">Ključi</a>
+        <a href="#paketi">Paketi</a>
+        <a href="#cosmetics">Cosmetics</a>
+        <a href="#boosti">Boosti</a>
+    </div>
+</nav>
+
+<!-- SHOP SEKCIJA -->
+<div class="container" id="shop">
+
+    <!-- RANKI -->
+    <h2 id="ranki">Ranki</h2>
+    <div class="shop-grid">
+
+        <div class="item crate-hover">
+            <div class="item-title">VIP</div>
+            <div class="item-desc">Več ukazov, /feed, 3x kit mesečno.</div>
+            <div class="item-price">4.99€</div>
+            <div class="discord-btn" onclick="showPopup()">Naroči</div>
+        </div>
+
+        <div class="item crate-hover">
+            <div class="item-title">MVP</div>
+            <div class="item-desc">Barvni chat, mesečni bonusi.</div>
+            <div class="item-price">9.99€</div>
+            <div class="discord-btn" onclick="showPopup()">Naroči</div>
+        </div>
+
+        <div class="item crate-hover">
+            <div class="item-title">LEGEND</div>
+            <div class="item-desc">Največ privilegijev na serverju.</div>
+            <div class="item-price">14.99€</div>
+            <div class="discord-btn" onclick="showPopup()">Naroči</div>
+        </div>
+
+    </div>
+
+    <!-- KEYS -->
+    <h2 id="keys">Crate Ključi</h2>
+    <div class="shop-grid">
+
+        <div class="item crate-hover">
+            <div class="item-title">Basic Key</div>
+            <div class="item-desc">Osnovne nagrade.</div>
+            <div class="item-price">1.49€</div>
+            <div class="discord-btn" onclick="showPopup()">Naroči</div>
+        </div>
+
+        <div class="item crate-hover">
+            <div class="item-title">Epic Key</div>
+            <div class="item-desc">Rare itemi.</div>
+            <div class="item-price">3.99€</div>
+            <div class="discord-btn" onclick="showPopup()">Naroči</div>
+        </div>
+
+        <div class="item crate-hover">
+            <div class="item-title">Legendary Key</div>
+            <div class="item-desc">Najboljše nagrade.</div>
+            <div class="item-price">6.99€</div>
+            <div class="discord-btn" onclick="showPopup()">Naroči</div>
+        </div>
+
+    </div>
+
+    <!-- PAKETI -->
+    <h2 id="paketi">Paketi</h2>
+    <div class="shop-grid">
+
+        <div class="item crate-hover">
+            <div class="item-title">Starter Pack</div>
+            <div class="item-desc">Hrana, orodja, teleport scrolli.</div>
+            <div class="item-price">2.49€</div>
+            <div class="discord-btn" onclick="showPopup()">Naroči</div>
+        </div>
+
+        <div class="item crate-hover">
+            <div class="item-title">Builder Pack</div>
+            <div class="item-desc">Gradbeni materiali in dekor.</div>
+            <div class="item-price">3.99€</div>
+            <div class="discord-btn" onclick="showPopup()">Naroči</div>
+        </div>
+
+        <div class="item crate-hover">
+            <div class="item-title">PvP Pack</div>
+            <div class="item-desc">Močan set in 5x golden apple.</div>
+            <div class="item-price">5.99€</div>
+            <div class="discord-btn" onclick="showPopup()">Naroči</div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- POPUP -->
+<div class="popup-bg" id="popup">
+    <div class="popup-box">
+        <h3>Kupovanje na Discordu</h3>
+        <p>Izdelek lahko kupiš na našem Discord strežniku:</p>
+        <p>
+            <a href="https://discord.gg/VJvyGX5zdN" target="_blank">https://discord.gg/VJvyGX5zdN</a><br><br>
+            Kanal:  
+            <a href="https://discord.com/channels/1441464981626290329/1442190488865079397" target="_blank">#shop-naročila</a>
+        </p>
+        <div class="close-popup" onclick="closePopup()">Zapri</div>
+    </div>
+</div>
+
+<!-- COSMETICS -->
+<h2 id="cosmetics">Cosmetics</h2>
+<div class="shop-grid">
+
+    <div class="item crate-hover">
+        <div class="item-title">Trail Effect</div>
+        <div class="item-desc">Poseben vizualni efekt med hojo.</div>
+        <div class="item-price">1.99€</div>
+        <div class="discord-btn" onclick="showPopup()">Naroči</div>
+    </div>
+
+    <div class="item crate-hover">
+        <div class="item-title">Particle Aura</div>
+        <div class="item-desc">Lep animiran efekti okoli igralca.</div>
+        <div class="item-price">3.49€</div>
+        <div class="discord-btn" onclick="showPopup()">Naroči</div>
+    </div>
+
+    <div class="item crate-hover">
+        <div class="item-title">NameTag Glow</div>
+        <div class="item-desc">Barvni glowing efekt nad igralcem.</div>
+        <div class="item-price">2.99€</div>
+        <div class="discord-btn" onclick="showPopup()">Naroči</div>
+    </div>
+
+</div>
+
+<!-- BOOSTI -->
+<h2 id="boosti">Boosti</h2>
+<div class="shop-grid">
+
+    <div class="item crate-hover">
+        <div class="item-title">2x XP Boost</div>
+        <div class="item-desc">Podvojen XP za 1 uro igranja.</div>
+        <div class="item-price">1.49€</div>
+        <div class="discord-btn" onclick="showPopup()">Naroči</div>
+    </div>
+
+    <div class="item crate-hover">
+        <div class="item-title">2x Drop Boost</div>
+        <div class="item-desc">Več loot dropov od mobov.</div>
+        <div class="item-price">2.49€</div>
+        <div class="discord-btn" onclick="showPopup()">Naroči</div>
+    </div>
+
+    <div class="item crate-hover">
+        <div class="item-title">Money Boost 1h</div>
+        <div class="item-desc">+35% več denarja pri službah.</div>
+        <div class="item-price">3.99€</div>
+        <div class="discord-btn" onclick="showPopup()">Naroči</div>
+    </div>
+
+</div>
+
+<footer>
+    © 2025 ChillZone | Minecraft Shop | Vse pravice pridržane.
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
